@@ -2,37 +2,11 @@
 <hr>
 <div class="row">
 <div class="col">
-    <h3>Personajes</h3>
-    <hr>
-    <ul>
-        <li>Krilin -700</li>
-        <li>Goku -15,000</li>
-        <li>Krilin -8,500</li>
-    </ul>
+    <app-personajes></app-personajes>
 </div>
 <div class="col">
-    <h3>Agregar <small>{{nuevo.nombre}}</small></h3>
-    <hr>
-    <form (ngSubmit)="agregar()">
-        <input 
-        type="text" 
-        placeholder="Nombre"
-        name="nombre"
-        [(ngModel)]="nuevo.nombre"
-        >
-        <!-- [value]="nuevo.nombre"
-        (input)="cambiarNombre($event)" -->
-        <br>
-        <input type="number" 
-        placeholder="Poder"
-        name="poder"
-        [(ngModel)]="nuevo.poder"
-        >
-        <hr>
-        <button type="submit">
-            Agregar
-        </button>
-    </form>
+    <app-agregarnuevo [nuevo]="nuevo"
+    ></app-agregarnuevo>
    
 </div>
 
